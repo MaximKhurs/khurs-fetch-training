@@ -1,19 +1,17 @@
 const url = 'https://jsonplaceholder.typicode.com/todos'
 
-
 function getTodo(){
      return fetch('https://jsonplaceholder.typicode.com/todos')
         .then(response =>{
             if(!response.ok){
-                return new Error ('Error')
+                console.log('Error')
             }
             return response.json();
         })
         .catch(error =>{
-            return new Error ('Error')
+            console.log('Error')
         })
 }
-
 
 function printTodos(todos){
     const todoList = document.getElementById('todo-list')
