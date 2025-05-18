@@ -33,7 +33,7 @@ function result(){
         printTodos(todos);
     })
     .catch(error => {
-        return new Error ('Error')
+        console.log('Error')
     });
 }
 
