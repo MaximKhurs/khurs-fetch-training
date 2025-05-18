@@ -4,12 +4,12 @@ function getTodo(){
      return fetch('https://jsonplaceholder.typicode.com/todos')
         .then(response =>{
             if(!response.ok){
-                console.log('Error')
+                return new Error('error')
             }
             return response.json();
         })
         .catch(error =>{
-            console.log('Error')
+            return new Error('error')
         })
 }
 
@@ -31,7 +31,7 @@ function result(){
         printTodos(todos);
     })
     .catch(error => {
-        console.log('Error')
+        return new Error('error')
     });
 }
 
